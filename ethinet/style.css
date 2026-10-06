@@ -1,0 +1,762 @@
+/* ================================
+   BASIC SETTINGS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVIGATION BAR
+================================ */
+
+header {
+    background: white;
+    width: 100%;
+    border-bottom: 1px solid #e5e8ef;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #172033;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #eef2ff 0%,
+            #f8fafc 100%
+        );
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.small-heading {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #4f46e5;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #596273;
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #4f46e5;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #3730a3;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.about,
+.discover,
+.why,
+.bias-intro,
+.quote {
+    padding: 100px 12%;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #4f46e5;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about p,
+.discover p,
+.why p,
+.bias-intro p {
+    max-width: 750px;
+    font-size: 18px;
+    color: #596273;
+    margin-bottom: 18px;
+}
+
+
+/* ================================
+   DISCOVER CARDS
+================================ */
+
+.discover {
+    background: white;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card {
+    flex: 1;
+
+    padding: 35px;
+
+    border: 1px solid #e5e8ef;
+    border-radius: 15px;
+
+    background: #fafbff;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   WHY SECTION
+================================ */
+
+.why {
+    background: #172033;
+    color: white;
+}
+
+.why p {
+    color: #d8deea;
+}
+
+.why .section-label {
+    color: #a5b4fc;
+}
+
+
+/* ================================
+   AI BIAS SECTION
+================================ */
+
+.bias-intro {
+    background: #eef2ff;
+}
+
+.bias-intro .button {
+    margin-top: 15px;
+}
+
+
+/* ================================
+   QUOTE
+================================ */
+
+.quote {
+    text-align: center;
+    background: white;
+}
+
+.quote h2 {
+    max-width: 900px;
+    margin: auto;
+}
+
+.quote p {
+    margin-top: 25px;
+    color: #596273;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 30px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .about,
+    .discover,
+    .why,
+    .bias-intro,
+    .quote {
+        padding: 70px 30px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+}
+/* ================================
+   SPOT THE BIAS PAGE
+================================ */
+
+.spot-hero {
+    padding: 90px 12%;
+    text-align: center;
+    background: #eef2ff;
+}
+
+.spot-hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.spot-hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #596273;
+    font-size: 18px;
+}
+
+
+/* DATASET SECTION */
+
+.dataset-section {
+    padding: 90px 10%;
+    background: white;
+    text-align: center;
+}
+
+.dataset-section h2 {
+    margin-bottom: 50px;
+}
+
+.dataset-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+/* DATASET BOX */
+
+.dataset-box {
+    width: 320px;
+    min-height: 250px;
+
+    padding: 35px;
+
+    border: 2px solid #dbe2ee;
+    border-radius: 18px;
+
+    background: #f8fafc;
+
+    transition: 0.3s;
+}
+
+.dataset-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(23, 32, 51, 0.12);
+}
+
+.dataset-box h3 {
+    margin-bottom: 25px;
+    color: #4f46e5;
+}
+
+
+/* DOTS */
+
+.dots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    max-width: 220px;
+
+    margin: 20px auto 30px;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+.dot.red {
+    background: #ef476f;
+}
+
+.dot.green {
+    background: #48b981;
+}
+
+
+/* DATASET BUTTON */
+
+.dataset-box button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.dataset-box button:hover {
+    background: #3730a3;
+}
+
+
+/* ANSWER BOX */
+
+#answer-box {
+    display: none;
+
+    max-width: 750px;
+
+    margin: 50px auto 0;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: #eef2ff;
+}
+
+#answer-box h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+#answer-box p {
+    color: #596273;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .spot-hero {
+        padding: 70px 30px;
+    }
+
+    .spot-hero h1 {
+        font-size: 40px;
+    }
+
+    .dataset-section {
+        padding: 70px 25px;
+    }
+
+}
+/* ================================
+   PROFESSIONAL NAVIGATION
+================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 15px rgba(23, 32, 51, 0.08);
+}
+
+.logo {
+    color: #172033;
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.nav-links a {
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #4f46e5;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+/* ================================
+   ETHINET HOME HERO UPGRADE
+================================ */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 85% 30%, #c7d2fe 0%, transparent 25%),
+        radial-gradient(circle at 70% 80%, #e0e7ff 0%, transparent 30%),
+        linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.hero::before {
+    content: "AI";
+    
+    position: absolute;
+
+    right: 8%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 260px;
+    font-weight: 900;
+
+    color: rgba(79, 70, 229, 0.07);
+
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+
+    max-width: 750px;
+}
+
+.hero .small-heading {
+    color: #4f46e5;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 76px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #4f46e5;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #596273;
+
+    margin-bottom: 38px;
+}
+
+.hero .button {
+    padding: 16px 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+
+    transition: 0.3s;
+}
+
+.hero .button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.35);
+}
+/* ================================
+   CAN TECHNOLOGY BE FAIR? UPGRADE
+================================ */
+
+.fair-section {
+    background: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.fair-section h2 {
+    font-size: 42px;
+    color: #172033;
+    margin-bottom: 20px;
+}
+
+.fair-section p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #596273;
+}
+
+.fair-section strong {
+    color: #4f46e5;
+}
+/* ================================
+   DISCOVER ETHINET CARDS UPGRADE
+================================ */
+
+.cards {
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 32px;
+
+    box-shadow: 0 8px 25px rgba(23, 32, 51, 0.06);
+
+    transition: 0.3s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #4f46e5;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(23, 32, 51, 0.12);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #172033;
+
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #667085;
+    line-height: 1.7;
+}
+/* ================================
+   SPOT THE BIAS BUTTONS
+================================ */
+
+.dataset-button {
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
+
+.dataset-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(79, 70, 229, 0.3);
+}
+
+.dataset-button:active {
+    transform: scale(0.97);
+}
+/* ================================
+   HERO IMAGE
+================================ */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-image {
+    width: 430px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(23, 32, 51, 0.18);
+
+    transition: 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-5px);
+}

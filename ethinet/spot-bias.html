@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EthiNet | Spot the Bias</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                EthiNet
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="bias.html">AI Bias</a>
+                <a href="real-life.html">Real-Life Biases</a>
+                <a href="spot-bias.html">Spot the Bias</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- PAGE INTRO -->
+    <section class="spot-hero">
+
+        <p class="section-label">
+            INTERACTIVE CHALLENGE
+        </p>
+
+        <h1>
+            🔍 Spot the Bias
+        </h1>
+
+        <p>
+            Can you find the problem? Compare the two training
+            datasets below. Which one would give an AI a better
+            variety of examples?
+        </p>
+
+    </section>
+
+
+    <!-- DATASET CHALLENGE -->
+    <section class="dataset-section">
+
+        <h2>
+            Choose the Better Dataset
+        </h2>
+
+        <div class="dataset-container">
+
+            <!-- DATASET A -->
+            <div class="dataset-box">
+
+                <h3>
+                    DATASET A
+                </h3>
+
+                <div class="dots">
+
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+
+                    <span class="dot green"></span>
+                    <span class="dot green"></span>
+
+                </div>
+
+                <button onclick="checkAnswer('A')">
+                    Choose Dataset A
+                </button>
+
+            </div>
+
+
+            <!-- DATASET B -->
+            <div class="dataset-box">
+
+                <h3>
+                    DATASET B
+                </h3>
+
+                <div class="dots">
+
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+
+                    <span class="dot green"></span>
+                    <span class="dot green"></span>
+                    <span class="dot green"></span>
+                    <span class="dot green"></span>
+
+                </div>
+
+                <button onclick="checkAnswer('B')">
+                    Choose Dataset B
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ANSWER -->
+        <div id="answer-box">
+
+            <h3 id="answer-title"></h3>
+
+            <p id="answer-text"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY IT MATTERS -->
+    <section class="why">
+
+        <p class="section-label">
+            THINK ABOUT IT
+        </p>
+
+        <h2>
+            Why Does Dataset Variety Matter?
+        </h2>
+
+        <p>
+            AI systems learn from the examples they are given.
+            If the training data is too limited or unbalanced,
+            the system may not work equally well in every situation.
+        </p>
+
+        <p>
+            More balanced and diverse data can help create
+            technology that works better for different people.
+        </p>
+
+    </section>
+
+
+    <!-- FINAL MESSAGE -->
+    <section class="quote">
+
+        <h2>
+            Better data can lead to better technology.
+        </h2>
+
+        <p>
+            Can you spot the bias?
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 EthiNet | Technology With Responsibility
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function checkAnswer(choice) {
+
+            const answerBox = document.getElementById("answer-box");
+            const answerTitle = document.getElementById("answer-title");
+            const answerText = document.getElementById("answer-text");
+
+            answerBox.style.display = "block";
+
+            if (choice === "B") {
+
+                answerTitle.textContent = "✓ Correct!";
+
+                answerText.textContent =
+                    "Dataset B is more balanced because it contains a better variety of examples. A more balanced dataset can help an AI system make fairer decisions.";
+
+            } else {
+
+                answerTitle.textContent = "Not quite!";
+
+                answerText.textContent =
+                    "Dataset A is less balanced because most of its examples are the same type. This can create bias in an AI system.";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
